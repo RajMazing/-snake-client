@@ -17,7 +17,7 @@ const setupInput = function (conn) {
 
 const handleUserInput = function (key) {
   // your code here
-  process.stdin.on('data', (key) => {
+  
   if (key === '\u0003') {
     console.log("Terminated Game :P")
     process.exit();
@@ -33,11 +33,18 @@ const handleUserInput = function (key) {
   connection.write('Move: right');    
 }
  if (key === 's') {
-   connection.write('Move: down');   
+   connection.write('Move: down'); 
+ }
+   if (key === 'e') {
+    connection.write('Say: Coo'); 
+}
+if (key === 'q') {
+    connection.write('Say: YOO');    
+
+  
  };
 
-});
-}
+};
 
 
   setupInput();
